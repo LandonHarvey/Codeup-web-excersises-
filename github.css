@@ -1,0 +1,68 @@
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+ul {
+    list-style: none;
+    color:white;
+}
+
+body {
+    background-color: purple;
+}
+
+header {
+    background-color: black;
+}
+
+h1 {
+    background-color: black;
+}
+
+nav {
+    background-color: black;
+}
+
+span {
+    color: white;
+}
+
+
+.container {
+    width: 100%;
+    margin: auto;
+    background-color: blue;
+    clear: both;
+}
+
+.memberPic {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.memberName {
+    width: 300px;
+    height: 100px;
+    float: left;
+}
+
+.status {
+    float: right;
+    width: 200px;
+    height: 100px;
+}
+
+.memberTable {
+    background-color: black;
+    height: 365px;
+    border: 1px solid grey;
+}
