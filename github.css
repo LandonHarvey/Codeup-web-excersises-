@@ -2,49 +2,52 @@
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 img {
-    width: 100px;
-    height: 100px;
+    width: 42px;
+    height: 42px;
 }
 
 ul {
     list-style: none;
-    color:white;
+    color:black;
 }
 
 body {
-    background-color: purple;
+
 }
 
 header {
-    background-color: black;
-}
-
-h1 {
-    background-color: black;
-}
-
-nav {
-    background-color: black;
+    background-color: #24292e;
 }
 
 span {
-    color: white;
+    color: black;
 }
 
+.repoBlocks {
+    width: 125px;
+    height: 25px;
+    float: left;
+    padding: 0px 0px 0px 5px;
+}
+
+.repoNav {
+    border: 1px solid grey;
+    background-color: #dce2ed;
+    height: 25px;
+}
 
 .container {
     width: 100%;
     margin: auto;
-    background-color: blue;
     clear: both;
 }
 
 .memberPic {
-    width: 100px;
+    width: 50px;
     height: 100px;
     float: left;
 }
@@ -57,12 +60,18 @@ span {
 
 .status {
     float: right;
-    width: 200px;
+    width: 100px;
     height: 100px;
 }
 
 .memberTable {
-    background-color: black;
+
     height: 365px;
     border: 1px solid grey;
+}
+
+.teams {
+    float: right;
+    width: 100px;
+    height: 100px;
 }
