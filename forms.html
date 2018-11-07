@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+    <style>
+
+        body {
+            margin: 0 8px 8px 0;
+        }
+
+        #navBar {
+            background-color: grey;
+            height: 50px;
+        }
+
+        #aboutButton, #priceButton, #formsButton  {
+            width: 65px;
+            height: 42px;
+            text-align: center;
+        }
+
+        .inline {
+            display: inline-block;
+        }
+
+        #divImage {
+            width: 65px;
+            height: 42px;
+            margin: 4px 7px;
+        }
+
+        #formLogo {
+            width: 42px;
+            height: 42px;
+        }
+
+        .formAss {
+            margin: 4px;
+        }
+
+        p {
+            margin: 6px 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header id="navBar">
+        <div class="inline" id="divImage"><span><a><img id="formLogo" src="image/form.png" alt="Forms Logo"></a></span></div>
+        <div class="inline" id="formsButton"><span><a>Forms</a></span></div>
+        <div class="inline" id="aboutButton"><span><a>About</a></span></div>
+        <div class="inline" id="priceButton"><span><a>Pricing</a></span></div>
+    </header>
+
+    <section class="formAss">
+        <form action="https://www.elformo.com/forms/1f91aab2-79b8-4d7a-b42f-07fc4a3336af" method="post" accept-charset="UTF-8">
+        <section id="emailSub"><p>Email:</p><label for="email"><input type="text" name="email" id="email" placeholder="Email:"></label></section>
+        <section id="passSub"><p>Password:</p><label for="password"><input type="password" name="password" id="password" placeholder="Password:"></label></section>
+        <section id="aboutSelf"><p>Tell us about yourself:</p><textarea name="bio" id="bio" rows="5" cols="40" placeholder="Please write a short description of yourself"></textarea></section>
+        <section id="howHear">
+            <p>How did you hear about us?</p>
+            <label for="billboard"><input id="billboard" type="radio" name="a1" value="billboard">Billboard</label><br>
+            <label for="advertisement"><input id="advertisement" type="radio" name="a2" value="advertisement">Radio Advertisement</label><br>
+            <label for="internet"><input id="internet" type="radio" name="a3" value="internet">Internet Advertisement</label><br>
+            <label for="other"><input id="other" type="radio" name="a4" value="other">Other</label><br>
+        </section>
+        <br>
+        <section id="webBrowser">
+            <label for="wb">What web browser are you on?</label>
+            <select name="wb[]" id="wb">
+                <option value="chrome">Chrome</option>
+                <option value="intExplore">Internet Explorer</option>
+                <option value="fireFox">Firefox</option>
+                <option value="safari">Safari</option>
+                <option value="dontNo">No Idea</option>
+            </select>
+        </section>
+        <br>
+        <section class="submitButton">
+            <button type="submit">Submit</button>
+        </section>    
+        </form>
+    </section>
+</body>
+</html>
