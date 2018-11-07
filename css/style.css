@@ -3,4 +3,61 @@
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
 }
+
+h2 {
+    text-decloration: underline;
+    color: orange;
+}
+
+body {
+    background-color: aqua;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#backImage {
+    background-image: url('../image/ghost.png');
+    background-size: 118px 121px;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+li {
+    list-style: url("../image/bulletpoint.png");
+}
+
+tbody>tr {
+    padding: 2px;
+    font-size: 2em;
+}
+
+img {
+    width: 500px;
+    height: 400px;
+}
+
+#fixImage {
+    padding: 0;
+}
+
+img:hover {
+    opacity: 0.1;
+}
+
+a:link {
+    color:purple;
+}
+
+a:visited {
+    color:white;
+}
+
+a:hover {
+    color:orange;
+}
+
+a:active {
+    color:darkgreen;
+}
+
