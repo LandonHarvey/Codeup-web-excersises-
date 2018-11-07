@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+</head>
+<body>
+<form action="https://request-inspector.glitch.me/">
+    <section>
+        <label>Credit Card Number:</label>
+        <label for="creditCard"><input type="text" id="creditCard" name="creditCard" pattern="\d{4}" maxlength="4" style="width: 30px" required></label>
+        <label for="creditCard2"><input type="text" id="creditCard2" name="creditCard2" pattern="\d{4}" maxlength="4" style="width: 30px" required></label>
+        <label for="creditCard3"><input type="text" id="creditCard3" name="creditCard3" pattern="\d{4}" maxlength="4" style="width: 30px" required></label>
+        <label for="creditCard4"><input type="text" id="creditCard4" name="creditCard4" pattern="\d{4}" maxlength="4" style="width: 30px" required></label>
+    </section><br>
+
+    <section>
+        <label>Exp Date (MM/YY):</label>
+        <label for="month"><input type="text" id="month" name="month" pattern="\d{2}" maxlength="2" style="width: 15px" required></label>
+        <label for="year"><input type="text" id="year" name="year" pattern="\d{2}" maxlength="2" style="width: 15px" required></label>
+    </section><br>
+
+    <section>
+        <label>Security Code</label>
+        <label for="code"><input type="text" id="code" name="code" pattern="\d{4}" maxlength="4" style="width: 30px" required></label>
+    </section><br>
+
+    <section>
+        <p style="margin: 0;">Billing Address:</p>
+        <label for="address"><input type="text" name="address" id="address" style="width: 200px; height: 45px" required></label>
+    </section>
+
+    <section>
+        <label for="onFile">Keep this credit card on file for future transactions:  <input type="checkbox" name="onFile" id="onFile" checked></label>
+    </section><br>
+
+    <section>
+        <button type="submit">Buy Now</button>
+    </section>
+</form>
+</body>
+</html>

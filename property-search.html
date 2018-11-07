@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Search</title>
+</head>
+<body>
+
+<form method="post" action="https://request-inspector.glitch.me/">
+    <section>
+        <label>Property Type:</label>
+        <label for="residential"><input type="radio" name="residential" id="residential" checked>Residential</label>
+        <label for="commercial"><input type="radio" name="commercial" id="commercial">Commercial</label>
+        <label for="industrial"><input type="radio" name="industrial" id="industrial">Industrial</label>
+    </section><br>
+
+    <section>
+        <label>Square Footage: </label>
+        <label for="sq1"><input type="radio" name="sq1" id="sq1">500sq.</label>
+        <label for="sq2"><input type="radio" name="sq2" id="sq2">1000sq.</label>
+        <label for="s3"><input type="radio" name="s3" id="s3">1500sq.</label>
+    </section><br>
+
+    <section>
+        <label>Min-Max Price:</label>
+        <label for="minPrice"><input type="text" name="minPrice" id="minPrice"></label>
+        <label for="maxPrice"><input type="text" name="maxPrice" id="maxPrice"></label>
+    </section><br>
+
+    <section>
+        <label>Zipcode:</label>
+        <label for="zipcode"><input type="text" name="zipcode" id="zipcode"></label>
+    </section><br>
+    <section>
+        <label for="bedroom">Number of Bedrooms:</label>
+        <select name="bedroom" id="bedroom">
+            <option value="b1">1+</option>
+            <option value="b2">2+</option>
+            <option value="b3">3+</option>
+        </select>
+    </section>
+
+    <section>
+        <label for="bathroom">Number of Bathrooms:</label>
+        <select name="bathroom" id="bathroom">
+            <option value="b1">1+</option>
+            <option value="b2">2+</option>
+            <option value="b3">3+</option>
+        </select>
+    </section><br>
+
+    <section>
+        <label for="hawks">Number of Hawks:</label>
+        <select name="hawks" id="hawks">
+            <option value="h1">1+</option>
+            <option value="h2">2+</option>
+            <option value="h3">1400+</option>
+        </select>
+    </section><br>
+
+    <section>
+        <button type="submit">Search Now</button>
+    </section>
+</form>
+</body>
+</html>
