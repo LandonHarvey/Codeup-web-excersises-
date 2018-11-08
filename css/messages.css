@@ -1,0 +1,60 @@
+
+:root {
+    --bg-success: rgba(50,205,50,.3);
+    --bg-info: rgba(30,144,255,.3);
+    --bg-warning: rgba(255,255,0,.3);
+    --bg-error: rgba(220,20,60,.3);
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+    margin: 2px;
+}
+
+.message-info {
+    color: blue;
+    background-color: var(--bg-info);
+    border-radius: 3px;
+    border: 1px solid grey;
+    width: 40%;
+    padding: 6px;
+    margin: 6px 0 0 0;
+}
+
+.message-success {
+     color: green;
+     background-color: var(--bg-success);
+     border-radius: 3px;
+     border: 1px solid grey;
+     width: 40%;
+     padding: 6px;
+     margin: 6px 0 0 0;
+ }
+
+.message-warning {
+      color: saddlebrown;
+      background-color: var(--bg-warning);
+      border-radius: 3px;
+      border: 1px solid grey;
+      width: 40%;
+      padding: 6px;
+      margin: 6px 0 0 0;
+  }
+
+.message-error {
+    color: darkred;
+    background-color: var(--bg-error);
+    border-radius: 3px;
+    border: 1px solid grey;
+    width: 40%;
+    padding: 6px;
+    margin: 6px 0 0 0;
+}
+
+
+
+
+
