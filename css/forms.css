@@ -1,0 +1,47 @@
+body {
+    margin: 0 8px 8px 0;
+}
+
+.container {
+    background-color: grey;
+    display: grid;
+    grid-template-columns: 65px 65px 65px 65px;
+    grid-template-rows: 50px;
+}
+
+#divImage {
+    grid-area: 1 / span 1;
+    justify-self: center;
+    align-self: center;
+}
+
+#formsButton  {
+    grid-column: 2 / span 1;
+    justify-self: center;
+    align-self: center;
+}
+
+#aboutButton {
+    grid-column: 3 / span 1;
+    justify-self: center;
+    align-self: center;
+}
+
+ #priceButton {
+     grid-column: 4 / span 1;
+     justify-self: center;
+     align-self: center;
+ }
+
+#formLogo {
+    width: 42px;
+    height: 42px;
+}
+
+.formAss {
+    margin: 4px;
+}
+
+p {
+    margin: 6px 0;
+}
