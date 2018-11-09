@@ -3,7 +3,7 @@
 }
 
 .row {
-    width: 50%;
+    width: 100%;
 }
 
 .row:after {
@@ -31,6 +31,10 @@
 
 .one-eighth {
     width: 12.5%;
+}
+
+.two-thirds {
+    width: 66.66%;
 }
 
 .column {

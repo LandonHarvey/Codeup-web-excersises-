@@ -1,33 +1,30 @@
 
-
 @media  screen and (min-width: 992px) {
 
 
-    * {
+    html {
         box-sizing: border-box;
-
+        height: 1210px;
+        width: 934px;
     }
 
     nav{
-        display: inline-block;
-        width: 50%;
-        margin: auto;
+        float: right;
+        margin-right: 8px;
     }
-    
+
     .hidden-on-desktop {
         display: none;
     }
-    
+
     h1 {
         float: left;
         width: 50%;
-        margin: auto;
-
+        margin: 0;
     }
 
     ul {
         list-style: none;
-        float: right;
     }
 
     li {
@@ -35,11 +32,14 @@
         margin: 0 10px;
     }
 
+    .header-img {
+        width: auto;
+        height: auto;
+    }
+
     img {
-        width: 890px;
-        height: 385px;
-        display: block;
-        margin: 2em auto 0 auto;
+        width: auto;
+        height: auto;
     }
 
     section {
@@ -49,7 +49,6 @@
     }
 
     .sub-section {
-        float: right;
     }
 
 
@@ -71,7 +70,7 @@
     }
 }
 
-@media  screen and (min-width: 400px) and (max-width: 992px) {
+@media  screen and (min-width: 400px) and (max-width: 990px) {
 
     * {
         width: 339px;
@@ -100,7 +99,7 @@
     }
 
     ul {
-        padding: 0; 
+        padding: 0;
     }
 
     h1 {
@@ -146,7 +145,7 @@
     footer {
         position: relative;
     }
-    
+
     title {
         display: none;
     }
