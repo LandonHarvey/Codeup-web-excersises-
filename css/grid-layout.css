@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    width: 50%;
+}
+
+.row:after {
+    display: table;
+    clear: both;
+    content: '';
+    margin: 1.5em;
+}
+
+#special {
+    margin-top: 2.5em;
+}
+
+.one-half {
+    width: 50%;
+}
+
+.one-third {
+    width: 33.33%
+}
+
+.one-fourth {
+    width: 25%;
+}
+
+.one-eighth {
+    width: 12.5%;
+}
+
+.column {
+    float: left;
+    color:black;
+    padding: .7em;
+}
+
+
