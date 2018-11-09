@@ -1,0 +1,151 @@
+
+
+@media  screen and (min-width: 992px) {
+
+
+    * {
+        box-sizing: border-box;
+
+    }
+
+    nav{
+        display: inline-block;
+        width: 50%;
+        margin: auto;
+    }
+
+    h1 {
+        float: left;
+        width: 50%;
+        margin: auto;
+
+    }
+
+    ul {
+        list-style: none;
+        float: right;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    img {
+        width: 890px;
+        height: 385px;
+        display: block;
+        margin: 2em auto 0 auto;
+    }
+
+    .hidden-on-desktop {
+        display: none;
+    }
+
+
+    section {
+        display: inline-block;
+        width: 49%;
+        height: 400px;
+    }
+
+    .sub-section {
+        float: right;
+    }
+
+    footer {
+
+    }
+
+    footer>p {
+        width: 82%;
+        margin: auto;
+        display: inline-block;
+    }
+
+    #social-media-links {
+        display: inline-block;
+    }
+
+    .socialMedia {
+        height: 3em;
+        width: 3em;
+        margin: 0;
+        float: right;
+    }
+}
+
+@media  screen and (min-width: 400px) and (max-width: 992px) {
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    nav{
+        display: inline-block;
+        width: 50%;
+        margin: auto;
+    }
+
+    h1 {
+        float: left;
+        width: 50%;
+        margin: auto;
+    }
+
+    ul {
+        list-style: none;
+        float: right;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    img {
+        width: 890px;
+        height: 385px;
+        display: block;
+        margin: 2em auto 0 auto;
+    }
+
+    .hidden-on-desktop {
+        display: none;
+    }
+
+
+    section {
+        display: inline-block;
+        width: 49%;
+        height: 400px;
+    }
+
+    .sub-section {
+        float: right;
+    }
+
+    footer {
+
+    }
+
+    footer>p {
+        width: 82%;
+        margin: auto;
+        display: inline-block;
+    }
+
+    #social-media-links {
+        display: inline-block;
+    }
+
+    .socialMedia {
+        height: 3em;
+        width: 3em;
+        margin: 0;
+        float: right;
+    }
+}
+
+}
