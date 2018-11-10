@@ -1,0 +1,38 @@
+ul {
+    list-style: none;
+}
+
+.navButtons {
+    display: inline-block;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: 65px 65px 65px 65px;
+}
+
+#homeLogo {
+    height: 3em;
+    width: 3em;
+}
+
+#divImage {
+    grid-area: 1 / span 1;
+    place-self: center;
+}
+
+#newsButton {
+    grid-column: 2 / span 1;
+    place-self: center;
+}
+
+#graphsButton {
+    grid-column: 3 / span 1;
+    place-self: center;
+}
+
+#formsButton {
+    grid-column: 4 / span 1;
+    place-self: center;
+}

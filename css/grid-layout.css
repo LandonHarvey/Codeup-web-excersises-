@@ -22,7 +22,8 @@
 }
 
 .one-third {
-    width: 33.33%
+    width: 33.33%;
+    margin: 0;
 }
 
 .one-fourth {
@@ -33,14 +34,21 @@
     width: 12.5%;
 }
 
+.offset-one-eighth {
+    margin: 50px;
+}
+
 .two-thirds {
     width: 66.66%;
+}
+
+.three-eighths {
+    width: 37.5%;
 }
 
 .column {
     float: left;
     color:black;
-    padding: .7em;
 }
 
 
