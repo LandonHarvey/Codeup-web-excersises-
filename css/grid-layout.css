@@ -35,7 +35,15 @@
 }
 
 .offset-one-eighth {
-    margin: 50px;
+    margin-left: 12.5%;
+}
+
+.offset-one-fourth {
+    margin-left: 25%;
+}
+
+.offset-one-half {
+    margin-left: 50%;
 }
 
 .two-thirds {
@@ -48,7 +56,19 @@
 
 .column {
     float: left;
-    color:black;
 }
 
+@media screen and (max-width: 768px) {
+    .two-thirds, .one-eighth, .one-third, .one-half {
+        width: 100%;
+    }
+
+    .offset-one-half {
+        margin-left: 0;
+    }
+
+    .column {
+        width: 100%;
+    }
+}
 

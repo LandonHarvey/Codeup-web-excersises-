@@ -1,0 +1,51 @@
+
+:root {
+    --main-bg-black: #2b2c2d;
+    --main-bg-red: #dd0000;
+    --main-bg-darkred:#b40001;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fullNav {
+    position: fixed;
+    width: 100%;
+    background-color: var(--main-bg-black);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    background-color: var(--main-bg-black);
+}
+
+#menuFeature {
+    float: left;
+    position: relative;
+}
+
+h1 {
+    float: left;
+}
+
+#backImage {
+    background-image: url("../image/logo-espn-82x20@2x.png");
+    background-repeat: no-repeat;
+    height: 22px;
+}
+
+.navFeatures {
+    display: inline-block;
+}
+
+ul {
+    float: right;
+
+}
+
+li {
+    list-style: none;
+}
