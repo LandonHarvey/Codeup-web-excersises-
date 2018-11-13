@@ -56,7 +56,13 @@ h1 {
     fill: white;
 }
 
+
+
 .list-group-item {
     background-color: rgba(177, 216, 245, .6);
     color: blue;
+}
+
+.borderBack {
+    border: 1px  solid rgba(177, 216, 245, .6);
 }

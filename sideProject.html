@@ -1,17 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>k12</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/sideProject.css">
+    <link rel="stylesheet" href="css/sideProjectBeauty.css">
+    <link rel="stylesheet" href="css/sideProjectTabs.css">
+    <script src="js/sideProjectTabs.js"></script>
+    <title>Should I?</title>
 </head>
-<body>
 
-<div class="container">
-    <div id="divImage"><span><a href=""><img id="homeLogo" src="image/10k.png" alt="10K"></a></span></div>
-    <div id="newsButton" class="navButtons"><span><a href="">News</a></span></div>
-    <div id="graphsButton" class="navButtons"><span><a href="">Graphs</a></span></div>
-    <div id="formsButton" class="navButtons"><span><a href="">Forms</a></span></div>
+<body>
+<div class="wrapper">
+
+    <div class="header tab">
+        <button class="tablinks budgetTab mobileGone" onclick="openFinance(event, 'budget')" id="defaultOpen">Budget</button>
+        <button class="tablinks spentTab mobileGone" onclick="openFinance(event, 'spent')">Spent</button>
+        <button class="tablinks remainingTab mobileGone" onclick="openFinance(event, 'remaining')">Remaining</button>
+        <button class="tablinks moreTab mobileGone" onclick="openFinance(event, 'more')">More</button>
+    </div>
+
+    <div id="budget" class="tabcontent budgetContent">
+        <h3>Budget</h3>
+        <p>Budget Info will go here</p>
+    </div>
+
+    <div id="purchase" class="tabcontent purchaseContent">
+        <h3>Purchase</h3>
+        <p>Purchase will go here</p>
+    </div>
+
+    <div id="spent" class="tabcontent spentContent">
+        <h3>Spent</h3>
+        <p>Spent Info will go here</p>
+    </div>
+
+    <div id="remaining" class="tabcontent remainingContent">
+        <h3>Remaining</h3>
+        <p>Remaining will go here </p>
+    </div>
+
+    <div id="more" class="tabcontent moreContent">
+        <h3>More Info</h3>
+        <p>More Info will go here</p>
+    </div>
+
+    <div class="purchase">Purchase</div>
+
+    <div class="footer tab">
+        <button class="tablinks budgetTab desktopGone" onclick="openFinance(event, 'budget')">Budget</button>
+        <button class="tablinks purchaseTab desktopGone" onclick="openFinance(event, 'purchase')">Purchase</button>
+        <button class="tablinks spentTab desktopGone" onclick="openFinance(event, 'spent')">Spent</button>
+        <button class="tablinks remainingTab desktopGone" onclick="openFinance(event, 'remaining')">Remaining</button>
+        <button class="tablinks moreTab desktopGone" onclick="openFinance(event, 'more')">More</button>
+    </div>
+
 </div>
 </body>
+
 </html>

@@ -1,38 +1,136 @@
-ul {
-    list-style: none;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
 
-.navButtons {
-    display: inline-block;
+html, body {
+    overflow: hidden;
 }
 
-.container {
+.wrapper {
     display: grid;
-    grid-template-rows: 50px;
-    grid-template-columns: 65px 65px 65px 65px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 10% auto 8%;
+    min-height: 100vh;
+    max-height: 100vh;
 }
 
-#homeLogo {
-    height: 3em;
-    width: 3em;
+.header {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 50% 50%;
 }
 
-#divImage {
-    grid-area: 1 / span 1;
-    place-self: center;
+.selectionMenu {
+    display: none;
 }
 
-#newsButton {
-    grid-column: 2 / span 1;
-    place-self: center;
+.budgetContent, .moreContent, .spentContent, .remainingContent {
+    grid-row: 2;
+    grid-column: span 4;
 }
 
-#graphsButton {
-    grid-column: 3 / span 1;
-    place-self: center;
+.purchase {
+    grid-column: span 8;
 }
 
-#formsButton {
-    grid-column: 4 / span 1;
-    place-self: center;
+#purchase {
+    display: none;
+}
+
+.footer {
+    grid-column: span 12;
+}
+
+.budgetTab {
+    grid-column: span 1;
+    grid-row: 2;
+}
+
+.moreTab {
+    grid-column: span 1;
+    grid-row: 2;
+}
+
+.purchaseTab {
+    grid-column: span 1;
+    grid-row: 2;
+}
+
+.spentTab {
+    grid-column: span 1;
+    grid-row: 2;
+}
+
+.remainingTab {
+    grid-column: span 1;
+    grid-row: 2;
+}
+
+.mobileGone {
+    display: block;
+
+}
+
+.desktopGone {
+    display: none;
+}
+
+@media screen and (max-width: 680px) {
+
+
+    .wrapper {
+        grid-template-rows: 10% auto 8%;
+    }
+
+    .budgetContent, .moreContent, .spentContent, .remainingContent, .purchaseContent {
+        grid-row: 2;
+        grid-column: span 12;
+    }
+
+    .purchase {
+        display: none;
+    }
+
+    .budgetTab {
+        grid-column: span 1;
+        place-self: baseline center;
+    }
+
+    .purchaseTab {
+        grid-column: span 1;
+        place-self: baseline center;
+    }
+
+    .spentTab {
+        grid-column: span 1;
+        place-self:  baseline center;
+    }
+
+    .remainingTab {
+        grid-column: span 1;
+        place-self: baseline center;
+    }
+
+    .moreTab {
+        grid-column: span 1;
+        grid-row: 2;
+        place-self: baseline center;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .desktopGone {
+        display: block;
+    }
+
+    .mobileGone {
+        display: none;
+    }
+    
 }

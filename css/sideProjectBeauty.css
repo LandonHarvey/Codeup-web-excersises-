@@ -1,0 +1,37 @@
+
+.header {
+    background-color: #0fb784;
+}
+
+.selectionMenu {
+    background-color: red;
+}
+
+.budget {
+    background-color: white;
+}
+
+.purchase {
+    background-color: white;
+    border-left: 1px solid black;
+}
+
+.footer {
+    background-color: yellow;
+}
+
+.mobileGone {
+    border-bottom: solid 1px black;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.desktopGone {
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    height: 100%;
+}
+
+
