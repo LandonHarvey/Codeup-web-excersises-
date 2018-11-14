@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/sideProjectBeauty.css">
     <link rel="stylesheet" href="css/sideProjectTabs.css">
     <script src="js/sideProjectTabs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
     <title>Should I?</title>
 </head>
 
@@ -22,9 +24,10 @@
         <button class="tablinks moreTab mobileGone" onclick="openFinance(event, 'more')">More</button>
     </div>
 
-    <div id="budget" class="tabcontent budgetContent">
+    <div id="budget" class="tabcontent budgetContent scrollSide">
         <h3>Budget</h3>
-        <p>Budget Info will go here</p>
+        <p>Budget Info will go here </p>
+        <canvas id="myBudget"></canvas>
     </div>
 
     <div id="purchase" class="tabcontent purchaseContent">
@@ -32,12 +35,12 @@
         <p>Purchase will go here</p>
     </div>
 
-    <div id="spent" class="tabcontent spentContent">
+    <div id="spent" class="tabcontent spentContent scrollSide">
         <h3>Spent</h3>
         <p>Spent Info will go here</p>
     </div>
 
-    <div id="remaining" class="tabcontent remainingContent">
+    <div id="remaining" class="tabcontent remainingContent scrollSide">
         <h3>Remaining</h3>
         <p>Remaining will go here </p>
     </div>
@@ -59,5 +62,5 @@
 
 </div>
 </body>
-
+<script src="js/chartsystem.js"></script>
 </html>

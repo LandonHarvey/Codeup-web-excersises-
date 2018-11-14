@@ -7,6 +7,7 @@
     <title> Order Pizza</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/custom.css">
+    <script src="js/orderpizza.js"></script>
 </head>
 <body>
 <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -47,15 +48,15 @@
         <div>
             <h2>Build your own Pizza!</h2>
             <hr>
-            <ul class="nav nav-tabs">
-                <li class="nav-item"><a href="" class="nav-link active"><span class="badge badge-pill badge-secondary">1</span>Size and Crust</a></li>
-                <li class="nav-item"><a href="" class="nav-link"><span class="badge badge-pill badge-secondary">2</span>Cheese and Sauce</a></li>
-                <li class="nav-item"><a href="" class="nav-link"><span class="badge badge-pill badge-secondary">3</span>Toppings</a></li>
+            <ul class="nav nav-tabs tab">
+                <li class="nav-item"><a href="" class="nav-link tablinks" id="defaultOpen" onclick="openTab(event, 'size'); return false;"><span class="badge badge-pill badge-secondary">1</span>Size and Crust</a></li>
+                <li class="nav-item"><a href="" class="nav-link tablinks" onclick="openTab(event, 'cheese'); return false;"><span class="badge badge-pill badge-secondary">2</span>Cheese and Sauce</a></li>
+                <li class="nav-item"><a href="" class="nav-link tablinks" onclick="openTab(event, 'toppings'); return false;"><span class="badge badge-pill badge-secondary">3</span>Toppings</a></li>
             </ul>
         </div>
     </div>
 
-    <div class="card borderBack">
+    <div class="card borderBack tabcontent" id="size">
         <div class="card-header bg-primary text-light"><span>Choose Size and Crust</span></div>
         <div class="card-body">
             <div class="card">
@@ -81,11 +82,11 @@
         </div>
     </div>
 
-    <div class="card borderBack">
+    <div class="card borderBack tabcontent" id="cheese">
         <div class="card-header bg-primary text-light"><span>Choose Cheese and Sauce</span></div>
         <div class="card-body">
             <div class="card">
-                <div class="card-header bg-rgba(177,216,245,.6)">Cheese?</div>
+                <div class="card-header">Cheese?</div>
                 <div class="card-body">Cheese
                 <select class="custom-select form-control" id="inputGroupSelect01" title="cheese">
                     <option selected>Choose...</option>
@@ -127,7 +128,7 @@
         </div>
     </div>
 
-    <div class="card borderBack">
+    <div class="card borderBack tabcontent" id="toppings">
         <div class="card-header bg-primary text-light"><span>Choose Toppings</span></div>
         <div class="card-body">
             <div class="card">

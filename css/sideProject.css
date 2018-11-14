@@ -4,8 +4,12 @@
     margin: 0;
 }
 
-html, body {
+body {
     overflow: hidden;
+}
+
+.scrollSide {
+    overflow-y: auto;
 }
 
 .wrapper {
