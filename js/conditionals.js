@@ -16,7 +16,7 @@
  * Can you refactor your code to use functions?
  */
 
-var didEnterNumber = confirm("Whould you like to enter a number?");
+var didEnterNumber = confirm("Would you like to enter a number?");
 
 if (didEnterNumber) {
     var userNumber = prompt("What is your number?");
@@ -25,7 +25,7 @@ if (didEnterNumber) {
     var userNegative = userNumber > 0 ? alert("Number is Positive") : alert("Number is Negative");
 
 } else {
-    alert("Didnt want your number anyway!");
+    alert("Didn't want your number anyway!");
 }
 
 /* ########################################################################## */
