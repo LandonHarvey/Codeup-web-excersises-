@@ -25,7 +25,6 @@ for (var i= Math.floor((Math.random() * 200) +20), j=0; j < 5; j++) {
 
 
 //#4
-
 for(i = 1, output= ""; i <= 9; i++) {
     output = String(i).repeat(i)
     console.log (output);
