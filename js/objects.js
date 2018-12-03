@@ -14,7 +14,7 @@
 
     var person = {
         firstname: "Rick",
-        lastname: "Sanchez",
+        lastname: "Sanchez"
     };
 
     console.log(person.lastname);
@@ -56,6 +56,15 @@
         {name: 'George', amount: 320}
     ];
 
+    // Better WAY!!!
+    // function checkout(clients){
+    //     clients.forEach(function (client) {
+    //         var discount = (client.amount >= 200) ? client.amount * 0.12: 0;
+    //         var total = client.amount - discount;
+    //         console.log(client.name + " " + client.amount + " " + discount + " " + total);
+    //     })
+    // }
+
     shoppers.discount = function () {
         for (var i = 0; i < shoppers.length; i++) {
             if (shoppers[i].amount > 200) {
@@ -91,13 +100,6 @@
         {title:'Dingy albatross', auther: {firstName: 'Donald', lastName: 'Dudeyup'}}
     ];
 
-    books.loops = function () {
-        for (var i = 0; i < books.length; i++) {
-            console.log ("Book # " + (i+1) + "\n" + "Title: " + books[i].title + "\n" + books[i].auther.firstName + " " + books[i].auther.lastName + "\n" + "---" + "\n");
-        }
-    };
-
-    books.loops();
 
     /**
      * TODO:
@@ -135,17 +137,37 @@
      *   `showBookInfo` function.
      */
 
-    var createBook = function () {
-       var bookC = {};
-       bookC.title = prompt("Name THE BOOK!!!");
-       bookC.author = prompt("Name THE AUTHOR");
-       console.log(bookC);
-    };
+    function createBook(title,author) {
+        var name = author.split('');
 
-    createBook();
+        return {
+            title: title,
+            author: {
+                firstName: name[0],
+                lastName: name[1]
+            }
+        }
+    }
+
+    books.push(createBook('bobs man', 'dude'));
+
+    books.forEach(function(book, index) {
+        console.log('Book #' + (index + 1));
+        showBookInfo(book);
+    });
+
+    function showBookInfo (book) {
+        console.log("Title: " + book.title + "\n" + book.auther.firstName + " " + book.auther.lastName + "\n" + "---" + "\n");
+    }
 
 
-
-
+    // var createBook = function () {
+    //    var bookC = {};
+    //    bookC.title = prompt("Name THE BOOK!!!");
+    //    bookC.author = prompt("Name THE AUTHOR");
+    //    console.log(bookC);
+    // };
+    //
+    // createBook();
 
 })();
