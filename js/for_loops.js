@@ -36,4 +36,12 @@ for (i = 100; i > 4; i -5) {
     i = i - 5
 }
 
+var x,y;
+var i = 1;
+for (x = 0; x < 2; x++) {
+    y = y+(i);
+}
+console.log(y);
+y = '';
+
 
