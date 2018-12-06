@@ -31,7 +31,7 @@
 <button id="btn4">btn4</button>
 <br>
 <hr>
-<button id="btn5">btn1 remove</button>
+<button id="btn5"> btn1 </button>
 <button id="btn6">btn2 remove</button>
 <button id="btn7">btn3 remove</button>
 <button id="btn8">btn4 remove</button>
@@ -40,7 +40,6 @@
 <script>
     (function() {
         "use strict";
-
 //#1************************************************************************************************************************************************
         var mainHeader = document.getElementById('main-header');
 
@@ -66,6 +65,13 @@
             var subHeader = document.getElementById('sub-header');
             subHeader.style.color = 'blue';
         };
+
+        var changeSubHeadingKey = function () {
+            var subHeader = document.getElementById('sub-header');
+            subHeader.style.color = 'red';
+        };
+
+        document.addEventListener( 'keypress', changeSubHeadingKey);
 
         var btn2 = document.getElementById('btn2');
         btn2.addEventListener('click', changeSubHeading, false);

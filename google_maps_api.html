@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+<!-- div to hold map -->
+<div id="map-canvas"></div>
+
+<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgBX1eFax6R7c_zP-ZG6Teh7G-0850UX0"></script>
+
+<!-- Script to show address on map -->
+<script type="text/javascript">
+    (function() {
+        "use strict";
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 20,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.426791,
+                lng: -98.489602
+            },
+
+            mapTypeId: google.maps.MapTypeId.HYBRID
+
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        var address = "755 6th Ave, New York, NY 10010";
+
+        //Init geocoder
+        var geocoder = new google.maps.Geocoder();
+
+        //geocode address
+        geocoder.geocode({ "address": address }, function(results, status) {
+
+            // Check for a successful result
+            if (status === google.maps.GeocoderStatus.OK) {
+                // Recenter the map over the address
+                map.setCenter(results[0].geometry.location);
+
+            } else {
+
+                // Show an error message with the status if our request fails
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+        });
+
+        // Create lat and long for our marker position
+        var twoBrothers = { lat: 40.744350, lng: -73.992020 };
+        var label = "Two Brothers!!! BOYS"
+        var infowindow = new google.maps.InfoWindow({
+            content: label
+        });
+
+// Add the marker to our existing map
+        var marker = new google.maps.Marker({
+            position: twoBrothers,
+            map: map
+        });
+
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+
+    })();
+
+</script>
+</body>
+</html>
