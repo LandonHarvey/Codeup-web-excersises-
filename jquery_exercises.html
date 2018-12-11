@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Jquery</title>
+    <script src="js/jquery-2.2.4.min.js"></script>
 </head>
 <body>
 
+<h1 class="heading-mains">Hello, Jquery</h1>
+<div class="codeup">
+<p class="codeup">Jquery is pretty cool I guess</p>
+<ul id="codeup">
+    <li>Jquery</li>
+    <li>JavaScript</li>
+    <li>Bootstrap</li>
+</ul>
+</div>
 
-<script src="js/jquery-2.2.4.min.js"></script>
 <script>
-    window.onload = function() {
-        alert( 'The page has finished loading!' );
-    }
+
+   $('li').css('font-size', '20px');
+   $('h1 , li , p').css('background-color', 'yellow')
+   var h1s = $('h1').html();
+   alert( h1s);
+
+
 </script>
 </body>
 </html>
+
