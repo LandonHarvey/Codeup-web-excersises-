@@ -11,6 +11,7 @@
 </head>
 <body>
 <a href="#" id="toggle">SHOW THOSE FACTS!</a>
+<button>Change Those</button>
 <dl>
     <dt>Fact 1</dt>
     <dd class="invisible">In the National Park System, there are 407 sites covering more than 84 million acres of land</dd>
@@ -66,15 +67,59 @@
     </dd>
 </dl>
 
+<ul>
+    <li><h3>Big Bend</h3></li>
+    <li>
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact BONUS</li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li><h3>Big Bend</h3></li>
+    <li>
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact BONUS</li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li><h3>Big Bend</h3></li>
+    <li>
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact BONUS</li>
+        </ul>
+    </li>
+</ul>
+
 
 <script src="js/jquery-2.2.4.min.js"></script>
 <script>
     var audio = new Audio('Sound/tim_and_eric_it_s_free_real_estate.mp3')
 
     $(document).ready(function () {
-        $('#toggle').click(function (e) {
+        $('#toggle').click(function () {
             $('.invisible').toggle('.invisible');
             audio.play()
+        })
+        $('button').click(function () {
+            $('ul > li:last-child').css('background-color', 'yellow')
+        })
+        $('h3').click(function () {
+            console.log('2')
+            $('ul > li:last-child').css('font-weight', 'bold')
+        })
+        $('li').click(function () {
+            $('ul > li').css('color', 'blue')
         })
     })
 </script>
