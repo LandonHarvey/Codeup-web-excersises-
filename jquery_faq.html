@@ -7,9 +7,25 @@
         .invisible {
             display: none;
         }
+
+        .hidden {
+
+        }
+
+        ul {
+            list-style: none;
+        }
+
     </style>
 </head>
 <body>
+<div>
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <span>X</span>
+</div>
+
+<h2>REGISTER PLEASE!!!! THIS IS NOT SPAM!!!</h2>
+
 <a href="#" id="toggle">SHOW THOSE FACTS!</a>
 <button>Change Those</button>
 <dl>
@@ -70,7 +86,7 @@
 <ul>
     <li><h3>Big Bend</h3></li>
     <li>
-        <ul>
+        <ul class="hidden">
             <li>Fact 1</li>
             <li>Fact 2</li>
             <li>Fact 3</li>
@@ -81,7 +97,7 @@
 <ul>
     <li><h3>Big Bend</h3></li>
     <li>
-        <ul>
+        <ul class="hidden">
             <li>Fact 1</li>
             <li>Fact 2</li>
             <li>Fact 3</li>
@@ -92,7 +108,7 @@
 <ul>
     <li><h3>Big Bend</h3></li>
     <li>
-        <ul>
+        <ul class="hidden">
             <li>Fact 1</li>
             <li>Fact 2</li>
             <li>Fact 3</li>
@@ -115,12 +131,23 @@
             $('ul > li:last-child').css('background-color', 'yellow')
         })
         $('h3').click(function () {
-            console.log('2')
             $('ul > li:last-child').css('font-weight', 'bold')
         })
         $('li').click(function () {
             $('ul > li').css('color', 'blue')
         })
+        $('span').click(function () {
+            $('div').hide()
+        })
+        $('ul > li').click(function () {
+            console.log('2')
+            $('.hidden').fadeToggle(1000);
+        })
+
+        setInterval(function () {
+            console.log('2')
+            $('h2').fadeIn(1000)
+        }, 8000)
     })
 </script>
 </body>
