@@ -35,14 +35,12 @@
         $.get('data/inventory.json')
             .done(inventory => {
                 inventory.forEach(item => {
-                    result += '<tr>'
-                    result += `<td>${item.title}</td>`
+                    result += `<tr>${item.title}</tr>`
                     result += `<td>${item.quantity}</td>`
                     result += `<td>${item.price}</td>`
-                    result += `<td>${item.categories}</td></tr>`
+                    result += `<td>${item.categories}</td>`
                 });
                 $('#insertProducts').html(result)
-                result = "";
             })
     })
 

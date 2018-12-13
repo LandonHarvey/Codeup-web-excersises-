@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+</head>
+<body>
+    <div id="posts">
+
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    var result = ""
+    var uli = ""
+   $.get('data/blog.json')
+       .done(blogs => {
+           blogs.forEach(item => {
+               result += `<h1>${item.title}</h1><br>`
+               result += `<p>${item.content}</p><br>`
+               result +=  `<ul id="${item.title}"></ul>`
+               item.categories.forEach(cat => {
+                   console.log(cat)
+               result += `<li>${cat}</li>`
+               })
+               result +=(`<h2>${item.date}</h2>`)
+               $('#posts').html(result)
+
+
+           })})
+</script>
+</body>
+</html>
