@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    <title>WEATHER!!!</title>
+    <!-- Loading third party fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="css/weather.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <style type="text/css">
+        #map-canvas {
+            width: 1150px;
+            height: 481px;
+        }
+        @media screen and (max-width: 990px) {
+
+        }
+    </style>
+</head>
+
+<body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgBX1eFax6R7c_zP-ZG6Teh7G-0850UX0"></script>
+
+<div class="site-content">
+    <div class="site-header">
+        <div class="container">
+            <a class="branding">
+                <img src="image/weatherlogo.jpg" alt="" class="logo" width="75" height="75">
+                <div class="logo-type">
+                    <h1 class="site-title">WE GOT WEATHER!!!</h1>
+                    <small class="site-description">ITS COLD OUTSIDE!!!!</small>
+                </div>
+            </a>
+
+            <!-- Default snippet for navigation -->
+            <div class="main-navigation">
+                <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+                <ul class="menu">
+                    <li class="menu-item current-menu-item"><a>Home</a></li>
+                    <li class="menu-item"><a>News</a></li>
+                    <li class="menu-item"><a>Live cameras</a></li>
+                    <li class="menu-item"><a>Photos</a></li>
+                    <li class="menu-item"><a>Contact</a></li>
+                </ul> <!-- .menu -->
+            </div> <!-- .main-navigation -->
+
+            <div class="mobile-navigation"></div>
+
+        </div>
+    </div> <!-- .site-header -->
+    <div class="hero" data-bg-image="images/banner.png">
+        <div class="container">
+            <form action="#" class="find-location">
+                <input id="findInput" type="text" placeholder="Find your location...">
+                <input id="find" type="submit" value="Find">
+            </form>
+
+        </div>
+    </div>
+    <div class="forecast-table">
+        <div class="container">
+            <div class="forecast-container">
+                <div class="today forecast">
+                    <div class="forecast-header">
+                        <div class="day">Friday</div>
+                    </div> <!-- .forecast-header -->
+                    <div class="forecast-content">
+                        <div class="location"></div>
+                        <div class="degree" id="moveIn">
+                            <div><span class="num">23</span><sup>o</sup>F
+                                <div class="forecast-icon">
+                                    <img id="moveover" class="imgW" src="" alt="" width=90>
+                                </div>
+                            </div>
+                        </div>
+                        <span><img src="" alt=""><span class="humidity"></span></span>
+                        <span><img src="" alt=""><span id="windSpeed">18</span></span>
+                        <span><img src="" alt=""><span id="press"></span></span>
+                    </div>
+                </div>
+                <div class="forecast">
+                    <div class="forecast-header">
+                        <div class="day">Tuesday</div>
+                    </div> <!-- .forecast-header -->
+                    <div class="forecast-content">
+                        <div class="forecast-icon">
+                            <img class="imgW" src="" alt="" width=48>
+                        </div>
+                        <div class="degree"><span class="num">23</span><sup>o</sup>F</div>
+                        <small><span class="humidity"></span></small>
+                    </div>
+                </div>
+                <div class="forecast">
+                    <div class="forecast-header">
+                        <div class="day">Wednesday</div>
+                    </div> <!-- .forecast-header -->
+                    <div class="forecast-content">
+                        <div class="forecast-icon">
+                            <img class="imgW" src="" alt="" width=48>
+                        </div>
+                        <div class="degree"><span class="num">23</span><sup>o</sup>F</div>
+                        <small><span class="humidity"></span></small>
+                    </div>
+                </div>
+                <div class="forecast">
+                    <div class="forecast-header">
+                        <div class="day">Thursday</div>
+                    </div> <!-- .forecast-header -->
+                    <div class="forecast-content">
+                        <div class="forecast-icon">
+                            <img class="imgW" src="" alt="" width=48>
+                        </div>
+                        <div class="degree"><span class="num">23</span><sup>o</sup>F</div>
+                        <small><span class="humidity"></span></small>
+                    </div>
+                </div>
+                <div class="forecast">
+                    <div class="forecast-header">
+                        <div class="day">Friday</div>
+                    </div> <!-- .forecast-header -->
+                    <div class="forecast-content">
+                        <div class="forecast-icon">
+                            <img class="imgW" src="" alt="" width=48>
+                        </div>
+                        <div class="degree"><span class="num">23</span><sup>o</sup>F</div>
+                        <small><span class="humidity"></span></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="main-content">
+        <div class="fullwidth-block">
+            <div class="container">
+                <h2 class="section-title">Live cameras</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="live-camera">
+                            <figure class="live-camera-cover"><a href="https://www.sdzsafaripark.org/elephant-cam"><img src="image/elephants.png" alt="Elephants"></a></figure>
+                            <h3 class="location">New York</h3>
+                            <small class="dateLive">8 oct, 8:00AM</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="live-camera">
+                            <figure class="live-camera-cover"><a href="https://zoo.sandiegozoo.org/cams/koala-cam"><img src="image/koala.png" alt="Koala"></a></figure>
+                            <h3 class="location">Los Angeles</h3>
+                            <small class="dateLive">8 oct, 8:00AM</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="live-camera">
+                            <figure class="live-camera-cover"><a href="https://zoo.sandiegozoo.org/cams/panda-cam"><img src="image/panda.png" alt=""></a></figure>
+                            <h3 class="location">Chicago</h3>
+                            <small class="dateLive">8 oct, 8:00AM</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="live-camera">
+                            <figure class="live-camera-cover"><a href="http://aqua.org/Experience/live"><img src="image/jelly.png" alt=""></a></figure>
+                            <h3 class="location">London</h3>
+                            <small class="dateLive">8 oct, 8:00AM</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fullwidth-block">
+            <div class="container">
+                <h2 class="section-title">Maps</h2>
+                <form action="#" class="find-location">
+                    <input id="findLat" type="text" placeholder="Input Latitude...">
+                    <input id="findLong" type="text" placeholder="Input Longitude...">
+                    <input id="findLL" type="submit" value="Find">
+                </form>
+                <div class="row">
+                    <div id="map-canvas"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fullwidth-block" data-bg-color="#262936">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="news">
+                            <div class="date">12.24</div>
+                            <h3><a href="#">The Magik Theatre presents A Charlie Brown Christmas</a></h3>
+                            <p>When Charlie Brown complains about the overwhelming materialism he sees among everyone during the Christmas season, Lucy suggests that he become director of the school Christmas pageant. Charlie Brown accepts, but this proves to be a frustrating endeavor. When an attempt to restore the proper holiday spirit with a forlorn little Christmas fir tree fails, he needs Linus’ help to discover the real meaning of Christmas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="news">
+                            <div class="date">12.25</div>
+                            <h3><a href="#">Old West Christmas Light Fest</a></h3>
+                            <p>The Old West Christmas Light Fest will have a drive-thru light displays and an Old West town filled with lights, food and fun at an all-new location. Guests can enjoy dazzling lights, visit Santa, snap holiday photos and travel back in time with games, activities and family fun, including Santa’s Holly Jolly Herd of Longhorns, ready to pull his sleigh across Texas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="news">
+                            <div class="date">12.26</div>
+                            <h3><a href="#">Moscow Ballet presents Great Russian Nutcracker: The Dove of Peace</a></h3>
+                            <p>Moscow Ballet will bring their Great Russian Nutcracker - Dove of Peace Tour to San Antonio. The tour brings the Christmas spirit to life with world-class performers; Russian folk legends Father Christmas and Snow Maiden, backdrops hand-painted by Russian masters; and a Dove of Peace with a 20-foot wingspan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fullwidth-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2 class="section-title">Application features</h2>
+                        <ul class="arrow-feature">
+                            <li>
+                                <h3>Natus error sit voluptatem accusantium</h3>
+                                <p>Doloremque laudantium totam rem aperiam Inventore veritatis et quasi architecto beatae vitae.</p>
+                            </li>
+                            <li>
+                                <h3>Natus error sit voluptatem accusantium</h3>
+                                <p>Doloremque laudantium totam rem aperiam Inventore veritatis et quasi architecto beatae vitae.</p>
+                            </li>
+                            <li>
+                                <h3>Natus error sit voluptatem accusantium</h3>
+                                <p>Doloremque laudantium totam rem aperiam Inventore veritatis et quasi architecto beatae vitae.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="section-title">Weather analysis</h2>
+                        <ul class="arrow-list">
+                            <li><a href="#">Accusantium doloremque laudantium rem aperiam</a></li>
+                            <li><a href="#">Eaque ipsa quae ab illo inventore veritatis quasi</a></li>
+                            <li><a href="#">Architecto beatae vitae dicta sunt explicabo</a></li>
+                            <li><a href="#">Nemo enim ipsam voluptatem quia voluptas</a></li>
+                            <li><a href="#">Aspernatur aut odit aut fugit, sed quia consequuntur</a></li>
+                            <li><a href="#">Magni dolores eos qui ratione voluptatem sequi</a></li>
+                            <li><a href="#">Neque porro quisquam est qui dolorem ipsum quia</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="section-title">Awesome Photos</h2>
+                        <div class="photo-grid">
+                            <a href="#"><img src="" alt="#"></a>
+                            <a href="#"><img src="" alt="#"></a>
+                            <a href="#"><img src="" alt="#"></a>
+                            <a href="#"><img src="" alt="#"></a>
+                            <a href="#"><img src="" alt="#"></a>
+                            <a href="#"><img src="" alt="#"></a>
+                            <a href="#"><img src="" alt="#"></a>
+                            <a href="#"><img src="" alt="#"></a>
+                            <a href="#"><img src="" alt="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main> <!-- .main-content -->
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <form action="#" class="subscribe-form">
+                        <input type="text" placeholder="Enter your email to subscribe...">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="social-links">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> <!-- .site-footer -->
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        "use strict";
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 5,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.426791,
+                lng: -98.489602
+            }
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        google.maps.event.addListener(map, 'click', function( event ){
+            console.log(event);
+            // event.latLng.lat() +event.latLng.lng()
+        });
+
+    })();
+
+    $('#findLL').click(function () {
+        (function() {
+            "use strict";
+
+            // Set our map options
+            var mapOptions = {
+                // Set the zoom level
+                zoom: 5,
+
+                // This sets the center of the map at our location
+                center: {
+                    lat:  $('#findLat').val(),
+                    lng:  $('#findLong').val()
+                }
+            };
+
+            // Render the map
+            var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        })();
+
+        $.get("http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=ebcbb758b37492b5da84a7d7c07d6b29&units=imperial", {
+            lat:  $('#findLat').val(),
+            lon:  $('#findLong').val()
+        }).done(function(data) {
+            var numClass = $('.num');
+            var dayWeek = $('.day');
+            var humid = $('.humidity');
+            var pics = $('.imgW');
+            var live = $('.dateLive');
+            var side = $('.dateSide');
+
+            console.log(data);
+            $('.location').text(data.city.name);
+            $('#press').text('P: ' + Math.floor(data.list[1].main.pressure));
+            $('#windSpeed').text(Math.floor(data.list[0].wind.speed) + 'km/h');
+
+            for (var i = 0, x = 0; x < numClass.length; i += 8,x++) {
+                numClass[x].innerText = Math.floor(data.list[i].main.temp)
+            }
+            for (var i = 0, x = 0; x < dayWeek.length; i += 8,x++) {
+                dayWeek[x].innerText = (data.list[i].dt_txt.split(' ').shift())
+            }
+            for (var i = 0, x = 0; x < humid.length; i += 8,x++) {
+                humid[x].innerText = (Math.floor(data.list[i].main.humidity) + '%')
+            }
+
+            for (var i = 0, x = 0; x < pics.length; i += 8,x++) {
+                if (data.list[i].clouds.all > 20 && data.list[i].clouds.all < 60){
+                    pics[x].setAttribute('src', 'image/suncloud.svg');
+                }else if (data.list[i].clouds.all < 20) {
+                    pics[x].setAttribute('src', 'image/sunny.svg');
+                }else if (data.list[i].clouds.all > 60) {
+                    pics[x].setAttribute('src', 'image/cloud.svg');
+                }
+            }
+            for (var i = 0, x = 0; x < live.length; i += 8,x++) {
+                live[x].innerText = (data.list[i].dt_txt.split(' ').pop())
+            }
+            for (var i = 0, x = 0; x < side.length; i += 8,x++) {
+                console.log(data.list[i].dt_txt.split('-').shift())
+                side[x].innerText = (data.list[i].dt_txt.split('-').pop())
+            }
+            console.log(data)
+        })
+    });
+
+</script>
+<script>
+
+    $('#find').click(function () {
+        $.get("http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=ebcbb758b37492b5da84a7d7c07d6b29&units=imperial", {
+            q:  $('#findInput').val()
+        }).done(function(data) {
+            var numClass = $('.num');
+            var dayWeek = $('.day');
+            var humid = $('.humidity');
+            var pics = $('.imgW');
+            var live = $('.dateLive');
+            var side = $('.dateSide');
+
+            console.log(data);
+            $('.location').text(data.city.name);
+            $('#press').text('P: ' + Math.floor(data.list[1].main.pressure));
+            $('#windSpeed').text(Math.floor(data.list[0].wind.speed) + 'km/h');
+
+            for (var i = 0, x = 0; x < numClass.length; i += 8,x++) {
+                numClass[x].innerText = Math.floor(data.list[i].main.temp)
+            }
+            for (var i = 0, x = 0; x < dayWeek.length; i += 8,x++) {
+                dayWeek[x].innerText = (data.list[i].dt_txt.split(' ').shift())
+            }
+            for (var i = 0, x = 0; x < humid.length; i += 8,x++) {
+                humid[x].innerText = (Math.floor(data.list[i].main.humidity) + '%')
+            }
+
+            for (var i = 0, x = 0; x < pics.length; i += 8,x++) {
+                if (data.list[i].clouds.all > 20 && data.list[i].clouds.all < 60){
+                    pics[x].setAttribute('src', 'image/suncloud.svg');
+                }else if (data.list[i].clouds.all < 20) {
+                    pics[x].setAttribute('src', 'image/sunny.svg');
+                }else if (data.list[i].clouds.all > 60) {
+                    pics[x].setAttribute('src', 'image/cloud.svg');
+                }
+            }
+            for (var i = 0, x = 0; x < live.length; i += 8,x++) {
+                live[x].innerText = (data.list[i].dt_txt.split(' ').pop())
+            }
+            for (var i = 0, x = 0; x < side.length; i += 8,x++) {
+                console.log(data.list[i].dt_txt.split('-').shift())
+                side[x].innerText = (data.list[i].dt_txt.split('-').pop())
+            }
+            console.log(data)
+        })
+    });
+
+    $.get("http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=ebcbb758b37492b5da84a7d7c07d6b29&units=imperial", {
+        q:     "San Antonio, US"
+    }).done(function(data) {
+
+        var numClass = $('.num');
+        var dayWeek = $('.day');
+        var humid = $('.humidity');
+        var pics = $('.imgW');
+        var live = $('.dateLive');
+        var side = $('.dateSide');
+
+        console.log(data);
+        $('.location').text(data.city.name);
+        $('#press').text('P: ' + Math.floor(data.list[1].main.pressure));
+        $('#windSpeed').text(Math.floor(data.list[0].wind.speed) + 'km/h');
+
+        for (var i = 0, x = 0; x < numClass.length; i += 8,x++) {
+            numClass[x].innerText = Math.floor(data.list[i].main.temp)
+        }
+        for (var i = 0, x = 0; x < dayWeek.length; i += 8,x++) {
+            dayWeek[x].innerText = (data.list[i].dt_txt.split(' ').shift())
+        }
+        for (var i = 0, x = 0; x < humid.length; i += 8,x++) {
+            humid[x].innerText = (Math.floor(data.list[i].main.humidity) + '%')
+        }
+
+        for (var i = 0, x = 0; x < pics.length; i += 8,x++) {
+            if (data.list[i].clouds.all > 20 && data.list[i].clouds.all < 60){
+                pics[x].setAttribute('src', 'image/suncloud.svg');
+            }else if (data.list[i].clouds.all < 20) {
+                pics[x].setAttribute('src', 'image/sunny.svg');
+            }else if (data.list[i].clouds.all > 60) {
+                pics[x].setAttribute('src', 'image/cloud.svg');
+            }
+        }
+        for (var i = 0, x = 0; x < live.length; i += 8,x++) {
+            live[x].innerText = (data.list[i].dt_txt.split(' ').pop())
+        }
+        for (var i = 0, x = 0; x < side.length; i += 8,x++) {
+            console.log(data.list[i].dt_txt.split('-').shift())
+            side[x].innerText = (data.list[i].dt_txt.split('-').pop())
+        }
+        });
+</script>
+
+</body>
+
+</html>
