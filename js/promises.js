@@ -22,7 +22,7 @@ const showPushEvents = (data) => {
 const userRepo = () => {
 
     return new Promise ((resolve, reject) => {
-        return fetch('https://api.github.com/users/LandonHarvey/events/public',
+        return fetch('https://api.github.com/users/:username/events/public',
             {headers: {'Authorization':
                         'token'
                 }})
